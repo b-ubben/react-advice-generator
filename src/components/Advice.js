@@ -22,9 +22,16 @@ const FetchedAdvice = styled.p`
   border-radius: 4px;
   box-shadow: var(--shadow);
   color: var(--secondary);
+  display: block;
   margin-top: 3rem;
   opacity: 0.97;
   padding: 2rem;
+  transition: .2s;
+
+  &.hidden {
+    display: none;
+    opacity: 1;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -65,7 +72,7 @@ const AdviceButton = props => {
 };
 
 const Advice = () => {
-  const [advice, setAdvice] = React.useState('Your advice will show up here..');
+  const [advice, setAdvice] = React.useState('');
 
   async function fetchAdvice() {
     const url = 'https://api.adviceslip.com/advice';
@@ -87,7 +94,7 @@ const Advice = () => {
   return(
     <AdviceContainer>
       <AdviceButton onClick={ handleClick }/>
-      <FetchedAdvice>{ advice }</FetchedAdvice>
+      <FetchedAdvice className={ advice !== '' ? '' : 'hidden' }>{ advice }</FetchedAdvice>
     </AdviceContainer>
   );
 };
