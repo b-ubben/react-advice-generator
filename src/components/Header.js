@@ -13,7 +13,7 @@ const HeaderContainer = styled.header`
 const HeaderCopy = styled.p`
   color: var(--light);
   font-weight: bold;
-  text-shadow: var(--shadow);
+  text-shadow: var(--shadow), var(--shadow);
 
   @media (max-width: 420px) {
     padding-left: 3rem;
@@ -24,7 +24,7 @@ const HeaderCopy = styled.p`
 const HeaderTitle = styled.h1`
   color: var(--light);
   font-size: calc(4rem + 0.25vw);
-  text-shadow: var(--shadow);
+  text-shadow: var(--shadow), var(--shadow);
 
   @media (max-width: 420px) {
     padding-left: 2rem;

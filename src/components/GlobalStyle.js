@@ -8,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
     --accent: #E6B450;
     --secondary: #3D424D;
     --font-family: Montserrat, sans-serif;
+    --gradient-base: rgb(116,221,103);
+    --gradient:linear-gradient(145deg, rgba(116,221,103,1) 0%, rgba(235,231,56,1) 19%, rgba(233,213,0,1) 52%, rgba(0,212,255,1) 93%);
     --font-size-standard: calc(1.15rem + 0.25vw);
     --font-size-small: calc(0.85rem + 0.25vw);
     --shadow:
